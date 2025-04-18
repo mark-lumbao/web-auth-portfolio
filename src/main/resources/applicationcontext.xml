@@ -7,12 +7,13 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.em.config"></context:component-scan>
+    <context:component-scan base-package="com.em.config" />
+    <context:component-scan base-package="com.em.web.controller" />
 
     <bean id="token-01" class="com.em.auth.Token" scope="singleton">
         <property name="value" value="token-01"/>
     </bean>
-    <bean id="token-02" class="com.em.auth.Token" scope="singleton">
+    <bean id="token-02" class="com.em.auth.Token" scope="singleton" autowire="byName" name="token02">
         <property name="value" value="token-02"/>
     </bean>
 </beans>

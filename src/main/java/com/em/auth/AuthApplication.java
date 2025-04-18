@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import(AppConfiguration.class)
 public class AuthApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(AuthApplication.class, args);
 
